@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lloyd's Transmissions & Drivetrain | Tucson, AZ</title>
+<meta name="description" content="Family owned transmission and drivetrain specialists in Tucson since 1982. Transmissions, differentials, transfer cases, and off road builds.">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://finalwebsite-2oa4.onrender.com/">
+<meta property="og:title" content="Lloyd's Transmissions &amp; Drivetrain">
+<meta property="og:description" content="Family owned drivetrain specialists in Tucson since 1982. Call (520) 571-0939.">
+<meta property="og:image" content="https://finalwebsite-2oa4.onrender.com/share-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://finalwebsite-2oa4.onrender.com/share-image.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Oswald:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -255,7 +266,9 @@ footer { background: var(--black); border-top: 1px solid #222; padding: 3rem 0 2
 .logo-mark { display: block; background: url('logo.png') center / contain no-repeat; }
 .logo-nav .logo-mark { width: 46px; height: 46px; flex-shrink: 0; }
 .hero-watermark .logo-mark { width: min(70vw, 560px); aspect-ratio: 1; opacity: 0.06; }
-.about-logo-wrap .logo-mark { width: 240px; height: 240px; position: relative; z-index: 1; opacity: 0.9; }
+.about-logo-wrap .logo-mark { width: min(360px, 32vw); height: min(360px, 32vw); position: relative; z-index: 1; opacity: 0.9; }
+.about-logo-wrap::before { width: min(435px, 38.7vw); height: min(435px, 38.7vw); }
+.about-logo-wrap::after { width: min(510px, 45.3vw); height: min(510px, 45.3vw); }
 .footer-brand .logo-mark { width: 54px; height: 54px; flex-shrink: 0; opacity: 0.85; }
 
 /* HERO TITLE FIT */
@@ -267,19 +280,19 @@ footer { background: var(--black); border-top: 1px solid #222; padding: 3rem 0 2
 /* GALLERY PHOTOS */
 .gallery-item:nth-child(n) { grid-column: auto; grid-row: auto; }
 .gallery-item:nth-child(1) { grid-column: span 6; grid-row: span 2; }
-.gallery-item:nth-child(2) { grid-column: span 3; grid-row: span 2; }
+.gallery-item:nth-child(2) { grid-column: span 6; grid-row: span 2; }
 .gallery-item:nth-child(3) { grid-column: span 3; grid-row: span 2; }
 .gallery-item:nth-child(4) { grid-column: span 3; grid-row: span 2; }
-.gallery-item:nth-child(5) { grid-column: span 5; grid-row: span 2; }
-.gallery-item:nth-child(6) { grid-column: span 4; }
-.gallery-item:nth-child(7) { grid-column: span 4; }
+.gallery-item:nth-child(5) { grid-column: span 6; }
+.gallery-item:nth-child(6) { grid-column: span 3; }
+.gallery-item:nth-child(7) { grid-column: span 3; }
 .g-overlay { opacity: 1; background: linear-gradient(to top, rgba(14,14,14,0.85) 0%, transparent 40%); }
 .gallery-item img { filter: none; }
 .gallery-item:hover img { filter: none; }
 
 @media (max-width: 900px) {
   .gallery-item:nth-child(n) { grid-column: span 1; grid-row: span 1; }
-  .gallery-item:nth-child(1), .gallery-item:nth-child(5) { grid-column: span 2; }
+  .gallery-item:nth-child(1), .gallery-item:nth-child(2), .gallery-item:nth-child(5) { grid-column: span 2; }
 }
 .nav-cta, .logo-nav-sub { white-space: nowrap; }
 @media (max-width: 640px) {
@@ -292,6 +305,46 @@ footer { background: var(--black); border-top: 1px solid #222; padding: 3rem 0 2
   .hero-badge { font-size: 0.6rem; letter-spacing: 0.25em; }
   .hero-badge::before, .hero-badge::after { display: none; }
   .hero-sub { letter-spacing: 0.15em; line-height: 1.8; }
+}
+@media (min-width: 901px) { .booking-inner { grid-template-columns: 1.2fr 1fr; align-items: center; } }
+.contact-list { display: flex; flex-direction: column; gap: 1.6rem; }
+.contact-list .contact-item { margin: 0; }
+.contact-text a { color: inherit; text-decoration: none; }
+.contact-text a:hover { color: var(--accent-text); }
+/* DIFFERENCE SECTION: full width points */
+.whyus-inner { grid-template-columns: 1fr; }
+.whyus-points { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem; margin-top: 1rem; }
+.whyus-point, .whyus-point:last-child { flex-direction: column; gap: 0.9rem; padding: 0 0 0 1.4rem; border-bottom: none; border-left: 1px solid #2c2c2c; }
+@media (max-width: 1100px) { .whyus-points { grid-template-columns: repeat(2, 1fr); gap: 2.5rem 2rem; } }
+@media (max-width: 640px) { .whyus-points { grid-template-columns: 1fr; } }
+/* PHONE NUMBERS AND LINK COLORS */
+.nobr { white-space: nowrap; }
+.hero-location a, .contact-text a, .footer-col a, a[href^="tel"]:not(.btn-primary):not(.btn-outline):not(.nav-cta) { color: inherit; text-decoration: none; }
+a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font: inherit !important; }
+/* GALLERY LAYOUT: people photos shown without awkward crops */
+.gallery-item:nth-child(1) { grid-column: span 7; grid-row: span 2; }
+.gallery-item:nth-child(2) { grid-column: span 5; grid-row: span 2; }
+.gallery-item:nth-child(3) { grid-column: span 3; grid-row: span 2; }
+.gallery-item:nth-child(4) { grid-column: span 3; grid-row: span 2; }
+.gallery-item:nth-child(5) { grid-column: span 6; grid-row: span 2; }
+.gallery-item:nth-child(6) { grid-column: span 8; grid-row: span 2; }
+.gallery-item:nth-child(7) { grid-column: span 4; grid-row: span 2; }
+@media (max-width: 900px) {
+  .gallery-grid { grid-auto-rows: auto; }
+  .gallery-item:nth-child(n) { grid-column: span 2; grid-row: auto; aspect-ratio: 4 / 3; }
+  .gallery-item:nth-child(3), .gallery-item:nth-child(4) { grid-column: span 1; aspect-ratio: 3 / 4; }
+  .gallery-item:nth-child(7) { aspect-ratio: 3 / 4; }
+}
+/* GALLERY ROWS 4 AND 5 */
+.gallery-item:nth-child(8) { grid-column: span 4; grid-row: span 2; }
+.gallery-item:nth-child(9) { grid-column: span 8; grid-row: span 2; }
+.gallery-item:nth-child(10) { grid-column: span 6; grid-row: span 2; }
+.gallery-item:nth-child(11) { grid-column: span 6; grid-row: span 2; }
+.gallery-item:nth-child(12) { grid-column: span 7; grid-row: span 2; }
+.gallery-item:nth-child(13) { grid-column: span 5; grid-row: span 2; }
+@media (max-width: 900px) {
+  .gallery-item:nth-child(n+8) { grid-column: span 2; grid-row: auto; aspect-ratio: 4 / 3; }
+  .gallery-item:nth-child(7), .gallery-item:nth-child(8) { grid-column: span 1; aspect-ratio: 3 / 4; }
 }
 </style>
 </head>
@@ -317,14 +370,14 @@ footer { background: var(--black); border-top: 1px solid #222; padding: 3rem 0 2
   <div class="hero-bg"></div>
   <div class="hero-watermark"><span class="logo-mark" aria-hidden="true"></span></div>
   <div class="hero-content">
-    <div class="hero-badge">Tucson, Arizona &bull; Father &amp; Son &bull; Est. Since Day One</div>
+    <div class="hero-badge">Tucson, Arizona &bull; Father &amp; Son &bull; Est. 1982</div>
     <h1 class="hero-title">
       Lloyd's
       <span class="sub">Transmissions <span class="amp">&amp;</span> Drivetrain</span>
     </h1>
     <div class="hero-divider"><div class="hero-divider-icon"></div></div>
     <p class="hero-sub">Transmissions &bull; Differentials &bull; Transfer Cases &bull; Off-Road</p>
-    <p class="hero-location">3215 S Dodge Blvd, Tucson, AZ 85713 &nbsp;&bull;&nbsp; (520) 571-0939</p>
+    <p class="hero-location">3215 S Dodge Blvd, Tucson, AZ 85713 &nbsp;&bull;&nbsp; <a href="tel:5205710939" class="nobr">(520) 571-0939</a></p>
     <div class="hero-ctas">
       <a href="#contact" class="btn-primary">Schedule Service</a>
       <a href="tel:5205710939" class="btn-outline">Call Us Now</a>
@@ -354,12 +407,12 @@ footer { background: var(--black); border-top: 1px solid #222; padding: 3rem 0 2
         <h2 class="section-title">A Family Built <em>On Trust</em></h2>
         <div class="accent-rule"><div class="accent-rule-dot"></div></div>
         <div class="about-text">
-          <p>Lloyd's Transmissions &amp; Drivetrain is a father-and-son shop right here in Tucson. Lloyd and Darrell built this business on the belief that every customer deserves straight answers, honest diagnostics, and work done right the first time.</p>
+          <p>Lloyd's Transmissions &amp; Drivetrain is a father-and-son shop right here in Tucson. We built this business on the belief that every customer deserves straight answers, honest diagnostics, and work done right the first time.</p>
           <p>From daily drivers to serious off-road rigs, we've seen it all. We specialize in the complex stuff: transmissions, differentials, transfer cases, and full drivetrain systems. We take the time to explain what's wrong and why before we ever touch a bolt.</p>
-          <p>No upselling. No guesswork. Just solid work at fair prices, the way a family shop should operate.</p>
+          <p>No upselling. No guesswork. Just solid work at fair prices, the way a family shop should operate. It's why 98% of our new customers find us through word of mouth.</p>
         </div>
         <div class="about-stats">
-          <div><div class="stat-num">2</div><div class="stat-label">Generations of Experience</div></div>
+          <div><div class="stat-num">3</div><div class="stat-label">Generations of Experience</div></div>
           <div><div class="stat-num">5</div><div class="stat-label">Star Reputation</div></div>
           <div><div class="stat-num">100%</div><div class="stat-label">Honest Diagnostics</div></div>
           <div><div class="stat-num">4WD</div><div class="stat-label">Off-Road Capable</div></div>
@@ -381,13 +434,13 @@ footer { background: var(--black); border-top: 1px solid #222; padding: 3rem 0 2
       <div class="service-card fade-in">
         <div class="service-number">01</div>
         <h3 class="service-name">Transmission Repair &amp; Rebuild</h3>
-        <p class="service-desc">Automatic and manual transmission diagnostics, repair, and full rebuilds. We restore shifting performance and extend the life of your drivetrain at a fraction of dealership cost.</p>
+        <p class="service-desc">Manual transmission diagnostics, repair, and full rebuilds. We restore shifting performance and extend the life of your drivetrain at a fraction of dealership cost.</p>
         <span class="service-tag">Auto &amp; Manual</span>
       </div>
       <div class="service-card fade-in">
         <div class="service-number">02</div>
         <h3 class="service-name">Differential Service</h3>
-        <p class="service-desc">Front, rear, and limited-slip differential rebuilds and repairs. Critical for off-road performance, towing, and proper power distribution to all four wheels on any terrain.</p>
+        <p class="service-desc">Front, rear, and limited-slip differential rebuilds and repairs, plus E-locker installs and differential housing upgrades. Critical for off-road performance, towing, and proper power distribution to all four wheels on any terrain.</p>
         <span class="service-tag">Front &amp; Rear</span>
       </div>
       <div class="service-card fade-in">
@@ -399,7 +452,7 @@ footer { background: var(--black); border-top: 1px solid #222; padding: 3rem 0 2
       <div class="service-card fade-in">
         <div class="service-number">04</div>
         <h3 class="service-name">Drivetrain &amp; Driveshaft</h3>
-        <p class="service-desc">Full drivetrain inspections, U-joint replacement, driveshaft balancing, and CV axle service. If it transfers power from your engine to your wheels, we handle it.</p>
+        <p class="service-desc">Full drivetrain inspections, U-joint replacement, and CV axle service. If it transfers power from your engine to your wheels, we handle it.</p>
         <span class="service-tag">Complete Drivetrain</span>
       </div>
       <div class="service-card fade-in">
@@ -451,15 +504,9 @@ footer { background: var(--black); border-top: 1px solid #222; padding: 3rem 0 2
             <div class="point-num">04</div>
             <div>
               <div class="point-title">Family Values</div>
-              <p class="point-desc">Lloyd and Darrell treat every customer the way they'd want their own family treated. That's not a slogan. It's how this shop has operated from day one.</p>
+              <p class="point-desc">We treat every customer the way we'd want our own family treated. People come in as customers and leave as friends. It's how this shop has operated since 1982.</p>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="fade-in">
-        <div class="whyus-quote">
-          <p class="quote-text">We built this shop on the idea that people deserve to know what's actually wrong with their vehicle, and to get it fixed right without getting gouged. That's it. That's the whole business.</p>
-          <p class="quote-attr">Lloyd &amp; Darrell, Owners</p>
         </div>
       </div>
     </div>
@@ -474,13 +521,19 @@ footer { background: var(--black); border-top: 1px solid #222; padding: 3rem 0 2
       <div class="accent-rule"><div class="accent-rule-dot"></div></div>
     </div>
     <div class="gallery-grid">
-      <div class="gallery-item"><img src="Photo_1.jpg" alt="In the office" loading="lazy" style="object-position:center 30%"><div class="g-overlay"><span class="g-overlay-text">In the office</span></div></div>
-      <div class="gallery-item"><img src="Photo_2.jpg" alt="3215 S Dodge Blvd" loading="lazy" style="object-position:center"><div class="g-overlay"><span class="g-overlay-text">3215 S Dodge Blvd</span></div></div>
-      <div class="gallery-item"><img src="Photo_3.jpg" alt="Front desk" loading="lazy" style="object-position:center 40%"><div class="g-overlay"><span class="g-overlay-text">Front desk</span></div></div>
-      <div class="gallery-item"><img src="Photo_4.jpg" alt="Front end work on a 4Runner" loading="lazy" style="object-position:center"><div class="g-overlay"><span class="g-overlay-text">Front end work on a 4Runner</span></div></div>
-      <div class="gallery-item"><img src="Photo_5.jpg" alt="Rear differential install" loading="lazy" style="object-position:center"><div class="g-overlay"><span class="g-overlay-text">Rear differential install</span></div></div>
-      <div class="gallery-item"><img src="Photo_6.jpg" alt="Suzuki Samurai build" loading="lazy" style="object-position:center"><div class="g-overlay"><span class="g-overlay-text">Suzuki Samurai build</span></div></div>
-      <div class="gallery-item"><img src="Photo_7.jpg" alt="Toyota 4Runner, ready to go" loading="lazy" style="object-position:center 60%"><div class="g-overlay"><span class="g-overlay-text">Toyota 4Runner, ready to go</span></div></div>
+      <div class="gallery-item"><img src="Image_1.jpg" alt="Darrell and Lloyd" loading="lazy" style="object-position:center 40%"><div class="g-overlay"><span class="g-overlay-text">Darrell and Lloyd</span></div></div>
+      <div class="gallery-item"><img src="Image_2.jpg" alt="Jeep Wrangler build" loading="lazy" style="object-position:center 55%"><div class="g-overlay"><span class="g-overlay-text">Jeep Wrangler build</span></div></div>
+      <div class="gallery-item"><img src="Image_3.jpg" alt="3215 S Dodge Blvd" loading="lazy" style="object-position:center"><div class="g-overlay"><span class="g-overlay-text">3215 S Dodge Blvd</span></div></div>
+      <div class="gallery-item"><img src="Image_4.jpg" alt="Axle rebuild" loading="lazy" style="object-position:center 40%"><div class="g-overlay"><span class="g-overlay-text">Axle rebuild</span></div></div>
+      <div class="gallery-item"><img src="Image_5.jpg" alt="Front office" loading="lazy" style="object-position:center 45%"><div class="g-overlay"><span class="g-overlay-text">Front office</span></div></div>
+      <div class="gallery-item"><img src="Image_6.jpg" alt="Transmission rebuild" loading="lazy" style="object-position:center 55%"><div class="g-overlay"><span class="g-overlay-text">Transmission rebuild</span></div></div>
+      <div class="gallery-item"><img src="Image_7.jpg" alt="Differential rebuild" loading="lazy" style="object-position:center 55%"><div class="g-overlay"><span class="g-overlay-text">Differential rebuild</span></div></div>
+      <div class="gallery-item"><img src="Image_8.jpg" alt="Transmission rebuilds" loading="lazy" style="object-position:center 50%"><div class="g-overlay"><span class="g-overlay-text">Transmission rebuilds</span></div></div>
+      <div class="gallery-item"><img src="Image_9.jpg" alt="Manual transmission rebuild" loading="lazy" style="object-position:center 55%"><div class="g-overlay"><span class="g-overlay-text">Manual transmission rebuild</span></div></div>
+      <div class="gallery-item"><img src="Image_10.jpg" alt="Classic GMC Jimmy" loading="lazy" style="object-position:center 55%"><div class="g-overlay"><span class="g-overlay-text">Classic GMC Jimmy</span></div></div>
+      <div class="gallery-item"><img src="Image_11.jpg" alt="Transmission and transfer case" loading="lazy" style="object-position:center 45%"><div class="g-overlay"><span class="g-overlay-text">Transmission and transfer case</span></div></div>
+      <div class="gallery-item"><img src="Image_12.jpg" alt="Classic Chevrolet" loading="lazy" style="object-position:center 60%"><div class="g-overlay"><span class="g-overlay-text">Classic Chevrolet</span></div></div>
+      <div class="gallery-item"><img src="Image_13.jpg" alt="Off road Jeep build" loading="lazy" style="object-position:35% 60%"><div class="g-overlay"><span class="g-overlay-text">Off road Jeep build</span></div></div>
     </div>
   </div>
 </section>
@@ -492,52 +545,13 @@ footer { background: var(--black); border-top: 1px solid #222; padding: 3rem 0 2
         <p class="section-label">Get In Touch</p>
         <h2 class="section-title">Schedule <em>Service</em></h2>
         <div class="accent-rule"><div class="accent-rule-dot"></div></div>
-        <p>Fill out the form and Lloyd or Darrell will get back to you promptly to confirm your appointment. You can also call us directly. We're always happy to talk through what your vehicle needs.</p>
-        <div class="contact-item"><div class="contact-text"><strong>Phone</strong>(520) 571-0939</div></div>
-        <div class="contact-item"><div class="contact-text"><strong>Address</strong>3215 S Dodge Blvd, Tucson, AZ 85713</div></div>
-        <div class="contact-item"><div class="contact-text"><strong>Hours</strong>Monday to Friday, 8am to 5pm &nbsp;|&nbsp; Closed weekends</div></div>
-        <div class="contact-item"><div class="contact-text"><strong>Near</strong>43rd &amp; Dodge, South Tucson</div></div>
+        <p>Give us a call to schedule service or talk through what your vehicle needs.</p>
+        <a href="tel:5205710939" class="btn-primary">Call <span class="nobr">(520) 571-0939</span></a>
       </div>
-      <div class="fade-in">
-        <form class="booking-form" id="bookingForm" action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
-          <div class="form-row">
-            <div class="field"><label>First Name</label><input type="text" name="firstName" placeholder="John" required></div>
-            <div class="field"><label>Last Name</label><input type="text" name="lastName" placeholder="Smith" required></div>
-          </div>
-          <div class="form-row">
-            <div class="field"><label>Phone Number</label><input type="tel" name="phone" placeholder="(520) 555-0000" required></div>
-            <div class="field"><label>Email</label><input type="email" name="email" placeholder="john@example.com" required></div>
-          </div>
-          <div class="field">
-            <label>Service Needed</label>
-            <select name="service" required>
-              <option value="" disabled selected>Select a service...</option>
-              <option>Transmission Repair / Rebuild</option>
-              <option>Differential Service</option>
-              <option>Transfer Case Repair</option>
-              <option>Drivetrain / Driveshaft</option>
-              <option>Off-Road Build / Upgrade</option>
-              <option>General Auto Repair</option>
-              <option>Diagnostic / Not Sure</option>
-            </select>
-          </div>
-          <div class="field"><label>Year, Make &amp; Model</label><input type="text" name="vehicle" placeholder="e.g. 2019 Ford F-250 4x4" required></div>
-          <div class="form-row">
-            <div class="field"><label>Preferred Date</label><input type="date" name="date" required></div>
-            <div class="field">
-              <label>Preferred Time</label>
-              <select name="time">
-                <option value="">Any time</option>
-                <option>Morning (8am to 12pm)</option>
-                <option>Afternoon (12pm to 5pm)</option>
-              </select>
-            </div>
-          </div>
-          <div class="field"><label>Describe the Issue</label><textarea name="notes" placeholder="Tell us what you're experiencing: noises, warning lights, shifting problems, etc."></textarea></div>
-          <input type="text" name="_gotcha" style="display:none">
-          <button type="submit" class="submit-btn"><span>Send Service Request</span></button>
-          <div class="form-msg" id="formMsg"></div>
-        </form>
+      <div class="fade-in contact-list">
+        <div class="contact-item"><div class="contact-text"><strong>Phone</strong><a href="tel:5205710939" class="nobr">(520) 571-0939</a></div></div>
+        <div class="contact-item"><div class="contact-text"><strong>Hours</strong>Monday through Friday, 9am to 5pm<br>Closed weekends and holidays</div></div>
+        <div class="contact-item"><div class="contact-text"><strong>Address</strong>3215 S Dodge Blvd, Tucson, AZ 85713</div></div>
       </div>
     </div>
   </div>
@@ -550,7 +564,7 @@ footer { background: var(--black); border-top: 1px solid #222; padding: 3rem 0 2
         <span class="logo-mark" role="img" aria-label="Lloyd's logo"></span>
         <div class="footer-brand-text">Lloyd's<br>Transmissions</div>
       </div>
-      <p class="footer-tagline">Family-owned drivetrain specialists<br>serving Tucson since day one.<br>Honest work. Fair prices. Every time.</p>
+      <p class="footer-tagline">Family-owned drivetrain specialists<br>serving Tucson since 1982.<br>Honest work. Fair prices. Every time.</p>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Services</div>
@@ -565,9 +579,9 @@ footer { background: var(--black); border-top: 1px solid #222; padding: 3rem 0 2
       <div class="footer-col-title">Contact</div>
       <p>3215 S Dodge Blvd</p>
       <p>Tucson, AZ 85713</p>
-      <a href="tel:5205710939">(520) 571-0939</a>
-      <p style="margin-top:0.5rem;">Monday to Friday, 8am to 5pm</p>
-      <p>Closed weekends</p>
+      <a href="tel:5205710939" class="nobr">(520) 571-0939</a>
+      <p style="margin-top:0.5rem;">Monday through Friday, 9am to 5pm</p>
+      <p>Closed weekends and holidays</p>
     </div>
   </div>
   <div class="footer-bottom">
@@ -581,34 +595,6 @@ footer { background: var(--black); border-top: 1px solid #222; padding: 3rem 0 2
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-  const form = document.getElementById('bookingForm');
-  const msgEl = document.getElementById('formMsg');
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('.submit-btn');
-    btn.querySelector('span').textContent = 'Sending...'; btn.disabled = true;
-    msgEl.className = 'form-msg'; msgEl.textContent = '';
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST', headers: { 'Accept': 'application/json' },
-        body: new FormData(form)
-      });
-      if (response.ok) {
-        msgEl.textContent = "Service request sent! We'll be in touch shortly to confirm.";
-        msgEl.className = 'form-msg success'; form.reset();
-      } else {
-        const data = await response.json();
-        const err = data.errors ? data.errors.map(e => e.message).join(', ') : 'Something went wrong.';
-        msgEl.textContent = err + ' Please call (520) 571-0939.';
-        msgEl.className = 'form-msg error';
-      }
-    } catch(err) {
-      msgEl.textContent = 'Could not send request. Please call (520) 571-0939.';
-      msgEl.className = 'form-msg error';
-    }
-    btn.querySelector('span').textContent = 'Send Service Request'; btn.disabled = false;
-  });
 </script>
 </body>
 </html>
